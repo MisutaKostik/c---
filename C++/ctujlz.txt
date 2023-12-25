@@ -1,0 +1,102 @@
+/*
+#include <iostream>
+using namespace std;
+
+int sum (int x, int y)
+{
+    return x+y;
+}
+
+int main()
+{
+    int a = 5, b = 3, c;
+    c = sum (a,b);
+    cout << "sum = " << c << endl;
+    cout << "sum = " << sum (a,b) << endl;
+
+    return 0;
+}
+*/
+
+// кратно ли 5
+/*
+#include <iostream>
+using namespace std;
+
+
+
+int max(int x)
+{
+    return (x%5==0)? x/5 : x+1;
+}
+
+int main()
+{
+    int a, b;
+    cin >> a;
+    b = max(a);
+    cout << "b = " << b << endl;
+    return 0;
+}
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int a = 100, b = 20;
+
+void f1(int a)
+{
+    a+= 10; //изменяется значение локальной переменной а
+    cout << "f1;\t" << a << "\t" << ::a << endl; // на экран выводится значение переменной а и б, через обращщение области видимости значание глобальной а
+}
+
+void f2(int b)
+{
+    b*= 2; //изменяется значение локальной переменной а
+    cout << "f2\t" << b << "\t" << a << endl; // на экран выводится значение переменной б и а, через обращщение области видимости значание глобальной б
+}
+
+int main()
+{
+    cout << "main:\t" << a << "\t" << b << endl; //на экране выводится значание
+    f1(a); f2(b);
+    cout << "main:\t" << a << "\t" << b << endl; //на экране выводится значание
+    return 0;
+}
+/*
+#include <iostream>
+using namespace std;
+
+float max (float x, float y); // объявление фунцкии
+
+int main() //главная функция
+{
+    float a = 5.5, b = 3.2, c= 14.1, d;
+    d = max(max(a,b),c);
+    cout << "max = " << d << endl;
+    return 0;
+}
+float max (float x, float y) // определение функции
+{
+    return (x > y) ? x : y;
+}
+*/
+/*
+#include <iostream>
+using namespace std;
+
+float min(float x, float y) // объявление фунцкии
+{
+    return (x > y) ? x : y;
+}
+int main() //главная функция
+{
+    float a, b, c;
+    cin >> a >> b;
+    c = min(3 * a,2 * b)+min(a-b,a+b);
+    cout << "min = " << c << endl;
+    return 0;
+}
+*/

@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    float x;
+    double y;
+    double z;
+    cout << "чему будет равен x" << endl;
+    cin >> x;
+    y = fabs(pow(x,3) - pow(x,2)) - (7*x)/(pow(x,3) - 15 * x);
+    
+    
+    z = 1 + x/3 + fabs(x) + (pow(x,3) + 4)/2;
+    
+    
+    cout << "y = "<< setprecision(5) << y << endl;
+    cout << "z = "<< setprecision(5) << z << endl;
+    
+    
+    
+    return 0;
+}

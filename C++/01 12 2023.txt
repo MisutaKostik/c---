@@ -1,0 +1,102 @@
+/*
+#include <iostream>
+
+using namespace std;
+
+void f(int a, int *b, int &c)
+{
+    a += 10;
+    (*b) += 10;
+    c += 10;
+    cout << "f:\t" << a << "\t" << *b << "\t" << c << endl;
+}
+
+int main()
+{
+    int x = 10, y =20, z = 30;
+    cout << "main:\t" << x << "\t" << y << "\t" << z << endl;
+    f(x, &y, z);
+    cout  << "main:\t" << x << "\t" << y << "\t" << z << endl;
+    return 0;
+}*/
+/*
+#include <iostream>
+
+using namespace std;
+
+void f(cout int *b, int &c)
+{
+    (*b) += 10;     // попытка изменить константный параметр
+    c += 10;
+}
+
+int main()
+{
+    int y = 20, z = 30;
+    f(&y, 2);       // константу нельзя преобразовать параметр передаваемый по адресу
+    cout << "main:\t" << y << "\t" << z << endl;
+    return 0;
+}*/
+
+/*
+int a;              // 1 глоб. перем. a
+
+int main()
+{
+    int b;          // 2 лок. перем. b
+    extern int x;   // 3 перем. x определена в другом месте
+    static c;       // 4 лок. статич. переменная c
+    a = 1;          // 5 присваиваниее глоб. переменной
+    int a;          // 6 лок. переменная a
+    a = 2;          // 7 присваивание лок. перем.
+    ::a = 3;        // 8 присваивание глоб. перем.
+    return 0;       
+}
+int x = 4;          // 9 определение и инициализация x 
+*/
+
+
+
+
+
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float volume(float r)
+{
+    const float pi = 3.14;
+    return 4.0/3*pi*pow(r,3);
+}
+
+int main()
+{
+    float z, r1, r2, r3;
+    cout << "введитоус радиоус шариоус" << endl;
+    cin >> r1 >> r2 >> r3;
+    z = (volume(r1)+volume(r1)+volume(r1))/3;
+    cout << "z =" << z << endl;
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float f(float x)
+{
+    
+    return pow(x,3)-pow(x,2)+x-1;
+}
+
+int main()
+{
+    float a, b, c, z;
+    cout << "введите 3 числа" << endl;
+    cin >> a >> b >> c;
+    z = f(2*a)+f(b+c);
+    cout << "z =" << z << endl;
+    return 0;
+}

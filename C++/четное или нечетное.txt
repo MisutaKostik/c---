@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x, max;
+    cin >> x;
+    (x%2==0) ? cout << "четное\n" : cout << "нечетное" << endl; 
+
+    return 0;
+}

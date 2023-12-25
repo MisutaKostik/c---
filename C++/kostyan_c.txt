@@ -1,0 +1,77 @@
+/*
+#include <iostream>
+
+using namespace std;
+
+int s(int x) 
+{
+    
+    return (x>1)? x*2 : x*(-1);
+    
+}
+
+int main()
+{
+    int a;
+    cout<<"введите челое число"<< endl;
+    cin >> a;
+    cout << s(a) << endl;
+    
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+
+using namespace std;
+
+int s(int x) 
+{
+    
+    return x*x;
+    
+  
+}
+
+int d(int x)
+{
+    return x*4;
+}
+int main()
+{
+    int a;
+    cout<<"введите сторону квадрата"<< endl;
+    cin >> a;
+    cout <<"S = "<< s(a) << endl;
+    cout <<"P = "<< d(a) << endl;
+    
+
+    return 0;
+}
+*/
+
+//
+
+#include <cmath>
+#include <iostream>
+
+
+using namespace std;
+
+int a(int x) 
+{
+    return pow(x,3)-sin(x);
+}
+    
+int main()
+{
+    int b;
+    int c;
+    cout<<"введите число" << endl;
+    cin >> b;
+    cin >> c;
+    cout<< a(b)<< endl;
+    cout<< a(c)<< endl;
+    return 0;
+}
